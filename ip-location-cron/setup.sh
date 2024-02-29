@@ -7,9 +7,6 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 sudo apt-get update
 sudo apt-get install -y python3 python3-pip
 
-# Task 2: Install requirements using pip3
-sudo pip3 install -r requirements.txt
-
 # Task 3: Install libraries from requirements.txt using xargs
 cat requirements.txt | xargs -n 1 sudo pip3 install
 
