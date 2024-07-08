@@ -14,6 +14,7 @@ cat requirements.txt | xargs -n 1 sudo pip3 install
 CRON_LOG_FILE="$SCRIPT_DIR/cron_job_log.txt"
 echo "0 0,12 * * * /usr/bin/python3 $SCRIPT_DIR/main.py >> $CRON_LOG_FILE 2>&1" | sudo crontab -
 
+sudo service cron reload
 # Task 5: Give full permissions to /var/html/www and its contents
 sudo chmod -R 777 /var/www/html
 
