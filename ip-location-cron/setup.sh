@@ -15,7 +15,7 @@ CRON_LOG_FILE="$SCRIPT_DIR/cron_job_log.txt"
 echo "0 0,12 * * * /usr/bin/python3 $SCRIPT_DIR/main.py >> $CRON_LOG_FILE 2>&1" | sudo crontab -
 
 # Task 5: Give full permissions to /var/html/www and its contents
-sudo chmod -R 777 /var/html/www
+sudo chmod -R 777 /var/www/html
 
 # Additional Task: Make sure to replace /path/to/main.py with the actual path to your main.py script
 # Note: Adjust the cron schedule according to your requirements
