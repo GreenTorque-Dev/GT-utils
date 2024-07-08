@@ -94,8 +94,8 @@ def main():
     process_cidr_file(cidr_file, output_directory=config.OUTPUT_DIR)
 
     time.sleep(2)
-    os.remove(output_path)
-    os.remove(extraction_path)
+    shutil.rmtree(output_path)
+    shutil.rmtree(extraction_path)
     print(f"File downloaded successfully to: {cidr_file}")
 
 
