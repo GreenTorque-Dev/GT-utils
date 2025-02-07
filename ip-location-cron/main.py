@@ -103,7 +103,7 @@ def main():
     print(f"File downloaded successfully to: {cidr_file}")
 
     block_list_download_url = "https://lists.blocklist.de/lists/all.txt"
-    block_list_output_path = os.path.join(config.OUTPUT_DIR, "all.txt")
+    block_list_output_path = os.path.join(config.OUTPUT_DIR, "blacklisted_ips.txt")
 
     download_file(block_list_download_url, block_list_output_path)
 
