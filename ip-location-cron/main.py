@@ -102,6 +102,13 @@ def main():
         pass
     print(f"File downloaded successfully to: {cidr_file}")
 
+    block_list_download_url = "https://lists.blocklist.de/lists/all.txt"
+    block_list_output_path = os.path.join(config.OUTPUT_DIR, "blacklisted_ips.txt")
+
+    download_file(block_list_download_url, block_list_output_path)
+
+    print(f"Block list file downloaded to: {block_list_output_path}")
+
 
 if __name__ == "__main__":
     resource_path = Path('resources')
