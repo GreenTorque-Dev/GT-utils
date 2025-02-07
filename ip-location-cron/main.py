@@ -102,6 +102,21 @@ def main():
         pass
     print(f"File downloaded successfully to: {cidr_file}")
 
+    block_list_download_url = "https://lists.blocklist.de/lists/all.txt"
+    block_list_output_path = str(resource_path / 'all.txt')
+
+    download_file(block_list_download_url, block_list_output_path)
+
+    time.sleep(2)
+
+    try:
+        os.remove(block_list_output_path)
+        print(f"Deleted file: {block_list_output_path}")
+    except:
+        pass
+
+    print(f"Block list file downloaded and cleaned up.")
+
 
 if __name__ == "__main__":
     resource_path = Path('resources')
